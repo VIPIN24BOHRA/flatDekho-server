@@ -32,6 +32,9 @@ const templateMsgSchedular = async () => {
                 if (tsDifference >= 96 * 60 * 60 * 1000 &&
                     tsDifference <= 97 * 60 * 60 * 1000)
                     sendTemplateFlag = true;
+                if (tsDifference >= 120 * 60 * 60 * 1000 &&
+                    tsDifference <= 121 * 60 * 60 * 1000)
+                    sendTemplateFlag = true;
                 if (sendTemplateFlag) {
                     await sendTemplateMessage(user.phoneNumber, "02f38725-1091-46eb-aaea-73d40b6fffdb");
                     await delay(1000);
