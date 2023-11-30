@@ -43,6 +43,11 @@ export const templateMsgSchedular = async () => {
           tsDifference <= 97 * 60 * 60 * 1000
         )
           sendTemplateFlag = true;
+        if (
+          tsDifference >= 120 * 60 * 60 * 1000 &&
+          tsDifference <= 121 * 60 * 60 * 1000
+        )
+          sendTemplateFlag = true;
 
         if (sendTemplateFlag) {
           await sendTemplateMessage(
